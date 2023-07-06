@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Feed from "./pages/Feed";
+import SearchFeed from "./pages/SearchFeed";
+import VideoDetails from "./pages/VideoDetails";
+import ChannelDetail from "./pages/ChannelDetail";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Feed />} />
+        <Route path="/search/:searchTerm" element={<SearchFeed />} />
+        <Route path="/video/:id" element={<VideoDetails />} />
+        <Route path="/channel/:id" element={<ChannelDetail />} />
+      </Routes>
+    </>
   );
 }
-
-export default App;
