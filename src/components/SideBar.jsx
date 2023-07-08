@@ -3,9 +3,7 @@ import { categories } from "../utils/constants";
 import BurgerM from "../components/BurgerM";
 import "./SideBar.scss";
 
-export default function SideBar() {
-  let selectedBtn = "New";
-
+export default function SideBar({ selectedCategury, setselectedCategury }) {
   return (
     <>
       <div className="wrapper_sidebar">
@@ -15,8 +13,12 @@ export default function SideBar() {
         {categories.map((category) => {
           return (
             <button
+              onClick={() => {
+                setselectedCategury(category.name);
+              }}
               style={{
-                backgroundColor: category.name === selectedBtn && "#c30909",
+                backgroundColor:
+                  category.name === selectedCategury && "#c30909",
               }}
               className="sidebarBtn"
               key={category.name}
