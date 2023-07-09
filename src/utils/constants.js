@@ -34,6 +34,13 @@ export const categories = [
   { name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
 
+export const slider2 = [
+  { icon: <i class="fa-solid fa-house slider2Icons"></i> },
+  { icon: <i class="fa-solid fa-films slider2Icons"></i> },
+  { icon: <i class="fa-solid fa-thumbs-up slider2Icons"></i> },
+  { icon: <i class="fa-solid fa-rectangle-history slider2Icons"></i> },
+];
+
 export const demoThumbnailUrl = "https://i.ibb.co/G2L2Gwp/API-Course.png";
 export const demoChannelUrl = "/channel/UCmXmlB4-HJytD7wek0Uo97A";
 export const demoVideoUrl = "/video/GDa8kZLNhJ4";

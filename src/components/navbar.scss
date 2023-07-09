@@ -1,14 +1,39 @@
 .c-navbar {
   background-color: #000;
+  position: sticky;
+  top: 0px;
   //   navbar left logo styles
-  a {
-    display: block;
-    margin: 1rem 0;
-    margin-left: 8rem;
-    img {
-      width: 40px;
+
+  .wrapper_leftSection {
+    display: flex;
+    align-items: center;
+    .burgerMenu {
+      transition: all 0.3s;
+      display: inline-block;
+      color: #ededed;
+      margin-bottom: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    a {
+      display: block;
+      margin-left: 4rem;
+      margin-top: 9px;
+      margin-bottom: 1rem;
+      img {
+        width: 40px;
+      }
+      .titleLogo {
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 30px;
+        display: inline-block;
+        vertical-align: 9px;
+        font-family: "coffee";
+      }
     }
   }
+
   // navbar right search box styles
   .form {
     width: 60%;

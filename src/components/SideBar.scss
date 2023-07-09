@@ -1,7 +1,7 @@
 .wrapper_sidebar {
   position: fixed;
   left: 0;
-  top: 0rem;
+  top: 4rem;
   overflow-y: auto;
   height: 100vh;
   z-index: 3;
@@ -49,11 +49,56 @@
       color: #ededed;
       display: inline-block;
     }
-    .burgerMenu {
-      transition: all 0.3s;
-      display: inline-block;
-      color: #ededed;
-      margin-bottom: 1rem;
-    }
+  }
+}
+.wrapper_slider2 {
+  position: fixed;
+  width: 4vw;
+  left: 0;
+  top: 5rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 25px;
+  .slider2Icons {
+    color: #fff !important;
+    font-size: 20px !important;
+  }
+  .homeIcon2 {
+    width: 23px;
+    display: inline-block;
+  }
+  .shortIcon2 {
+    width: 23px;
+    display: inline-block;
+  }
+  .hometitleIcon {
+    font-size: 11px;
+    color: #e5dfdf;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 17px;
+  }
+  .shortsTitleIcon {
+    font-size: 11px;
+    color: #e5dfdf;
+    margin-bottom: 17px;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  .subsTitleIcon {
+    font-size: 11px;
+    margin-bottom: 17px;
+    color: #e5dfdf;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  .libraryTitleIcon {
+    margin-bottom: 17px;
+    font-size: 11px;
+    color: #e5dfdf;
+    font-weight: 300;
+    margin-top: 10px;
   }
 }

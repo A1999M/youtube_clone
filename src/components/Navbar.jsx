@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { logo } from "../utils/constants";
+import ytLogo from "../assets/images/youtube.png";
+import BurgerM from "../components/BurgerM";
 import "./navbar.scss";
 
 export default function Navbar() {
@@ -9,9 +10,13 @@ export default function Navbar() {
       <div className="container-fluid c-navbar">
         <div className="row">
           <div className="col-6">
-            <Link to={"/"}>
-              <img src={logo} alt="header logo" />
-            </Link>
+            <div className="wrapper_leftSection">
+              <BurgerM />
+              <Link to={"/"}>
+                <img src={ytLogo} alt="header logo" />
+                <span className="titleLogo">YouTube</span>
+              </Link>
+            </div>
           </div>
           <div className="col-6">
             <form className="form">

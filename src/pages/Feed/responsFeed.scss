@@ -1,0 +1,154 @@
+@media (max-width: "576px") {
+  .wrapper_video {
+    padding: 0 1rem;
+    .wrapperDetailsDesc {
+      margin-top: -32px !important;
+      .titleVideo {
+        font-size: 1rem;
+        line-height: 1.7rem;
+      }
+      .channelName {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      .postDate {
+        margin-top: 10px;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .wrapper_titlePage {
+    margin-top: 12px;
+    margin-left: 12px;
+    span {
+      font-size: 34px !important;
+    }
+  }
+}
+@media (min-width: "576px") {
+  .wrapper_video {
+    padding: 0 1rem;
+    .wrapperDetailsDesc {
+      margin-top: -40px !important;
+      .titleVideo {
+        font-size: 1rem;
+        line-height: 1.7rem;
+      }
+      .channelName {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      .postDate {
+        margin-top: 10px;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .wrapper_titlePage {
+    margin-top: 10px;
+    margin-left: 10px;
+    span {
+      font-size: 34px !important;
+    }
+  }
+}
+@media (min-width: "768px") {
+  .wrapper_video {
+    padding: 0;
+    .wrapperDetailsDesc {
+      margin-top: -20px !important;
+      .titleVideo {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .channelName {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      .postDate {
+        margin-top: 10px;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .wrapper_titlePage {
+    margin-top: 10px;
+    margin-left: 0;
+    span {
+      font-size: 34px !important;
+    }
+  }
+}
+@media (min-width: "992px") {
+  .wrapper_video {
+    .wrapperDetailsDesc {
+      margin-top: -20px;
+      .titleVideo {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .channelName {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      .postDate {
+        margin-top: 10px;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .wrapper_titlePage {
+    margin-top: 10px;
+    span {
+      font-size: 34px !important;
+    }
+  }
+}
+@media (min-width: "1200px") {
+  .wrapper_video {
+    .wrapperDetailsDesc {
+      .titleVideo {
+        font-size: 1rem;
+        line-height: 1.7rem;
+      }
+      .channelName {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      .postDate {
+        margin-top: 10px;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .wrapper_titlePage {
+    margin-top: 0px;
+    span {
+      font-size: 40px !important;
+    }
+  }
+}
+@media (min-width: "1400px") {
+  .wrapper_video {
+    .wrapperDetailsDesc {
+      .titleVideo {
+        font-size: 1rem;
+        line-height: 1.7rem;
+      }
+      .channelName {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      .postDate {
+        margin-top: 10px;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

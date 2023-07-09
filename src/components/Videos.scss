@@ -1,33 +1,15 @@
 .wrapper_video {
-  border-radius: 20px;
-  // border: 1px solid #726c6cce;
-  overflow: hidden;
-  .wrapper_mainImage {
-    img {
-      width: 100%;
-    }
-  }
-  .logoChannel {
-    border-radius: 50%;
-    width: 9%;
-    border: 1px solid #ededed;
-  }
-  .wrapperDetails {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: 8px;
-    .wrapperChannelLogo {
-      .channelLogo {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid #ededed;
-        display: inline-block;
-        margin-right: 15px;
+  a {
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
+    .wrapper_mainImage {
+      img {
+        width: 100%;
       }
     }
     .wrapperDetailsDesc {
+      margin-top: -20px;
       .titleVideo {
         color: #ededed;
         font-size: 1rem;
@@ -42,18 +24,12 @@
         text-transform: capitalize;
         margin-top: 10px;
       }
-      .view {
-        display: inline-block;
-        color: #ededede0;
-        margin-top: 10px;
-        font-size: 15px;
-        margin-right: 15px;
-      }
       .postDate {
         display: inline-block;
         color: #ededede0;
         margin-top: 10px;
         font-size: 15px;
+        margin-left: 10px;
       }
     }
   }
