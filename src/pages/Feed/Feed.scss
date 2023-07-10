@@ -1,0 +1,21 @@
+p {
+  color: aliceblue;
+}
+.feed {
+  transition: all 0.3s;
+  .wrapper_titlePage {
+    span {
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: capitalize;
+      display: inline-block;
+      &:nth-child(1) {
+        color: #fff;
+      }
+      &:nth-child(2) {
+        color: #c30909;
+        margin-left: 8px;
+      }
+    }
+  }
+}

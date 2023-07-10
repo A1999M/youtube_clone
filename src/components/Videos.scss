@@ -1,0 +1,36 @@
+.wrapper_video {
+  a {
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
+    .wrapper_mainImage {
+      img {
+        width: 100%;
+      }
+    }
+    .wrapperDetailsDesc {
+      margin-top: -20px;
+      .titleVideo {
+        color: #ededed;
+        font-size: 1rem;
+        text-transform: capitalize;
+        font-weight: 500;
+        line-height: 1.7rem;
+      }
+      .channelName {
+        color: #ededede0;
+        font-size: 15px;
+        font-weight: 300;
+        text-transform: capitalize;
+        margin-top: 10px;
+      }
+      .postDate {
+        display: inline-block;
+        color: #ededede0;
+        margin-top: 10px;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
