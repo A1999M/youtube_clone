@@ -6,8 +6,14 @@ import "./Feed.scss";
 import "./responsFeed.scss";
 
 export default function Feed() {
-  const [selectedCategury] = useContext(categoryContext);
+  const [selectedCategury, , sizeW, , showSidebar] =
+    useContext(categoryContext);
   const [videos, setVideos] = useState(null);
+
+  let styleFeed =
+    showSidebar && sizeW < 1200
+      ? { filter: "brightness(0.5)" }
+      : { filter: "brightness(1)" };
 
   useEffect(() => {
     const url = `https://youtube-v31.p.rapidapi.com/search?part=snippet&q=${selectedCategury}&maxResults=50`;
@@ -30,9 +36,16 @@ export default function Feed() {
 
   return (
     <>
-      <div className="container-fluid feed">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ type: "tween", duration: 0.5 }}
+        style={styleFeed}
+        className="container-fluid feed"
+      >
         <div className="row justify-content-end">
-          <div className="col-12 col-md-11 col-xxl-10">
+          <div className="col-12 col-md-11 col-lg-10 col-xxl-10">
             <div className="row">
               {/* title page */}
               <div className="col-12">
@@ -60,7 +73,7 @@ export default function Feed() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

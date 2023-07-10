@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import categoryContext from "../context/categoryContext";
 import { categories } from "../utils/constants";
 import LibraryIcon from "../components/LibraryIcon";
@@ -8,19 +8,19 @@ import shortIcon from "../assets/images/film-roll.png";
 import "./SideBar.scss";
 
 export default function SideBar() {
-  let [selectedCategury, setselectedCategury] = useContext(categoryContext);
-  const [sizeW, setSizeW] = useState(window.innerWidth);
+  let [
+    selectedCategury,
+    setselectedCategury,
+    sizeW,
+    setSizeW,
+    showSidebar,
+    setShowSidebar,
+  ] = useContext(categoryContext);
 
-  console.log(window.innerWidth);
+  let styleSidebar = !showSidebar ? { width: "0vw" } : undefined;
 
   let handlerReSize = () => {
-    if (window.innerWidth >= 1200) {
-      setSizeW(window.innerWidth);
-    } else if (window.innerWidth > 768 && window.innerWidth <= 992) {
-      setSizeW(window.innerWidth);
-    } else if (window.innerWidth <= 768) {
-      setSizeW(window.innerWidth);
-    }
+    setSizeW(window.innerWidth);
   };
 
   useEffect(() => {
@@ -32,8 +32,7 @@ export default function SideBar() {
 
   return (
     <>
-      {sizeW <= 768 && null}
-      {sizeW <= 1400 && sizeW > 768 && (
+      {!showSidebar && sizeW > 768 && (
         <div className="wrapper_slider2">
           <img className="homeIcon2" src={homeIcon} alt="" />
           <p className="hometitleIcon">Home</p>
@@ -45,8 +44,8 @@ export default function SideBar() {
           <p className="libraryTitleIcon">Library</p>
         </div>
       )}
-      {sizeW >= 1400 && (
-        <div className="wrapper_sidebar">
+      {showSidebar && (
+        <div style={styleSidebar} className="wrapper_sidebar">
           {categories.map((category) => {
             return (
               <button

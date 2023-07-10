@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ytLogo from "../assets/images/youtube.png";
 import BurgerM from "../components/BurgerM";
 import "./navbar.scss";
+import "./responsNav.scss";
 
 export default function Navbar() {
   return (

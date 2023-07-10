@@ -2,6 +2,7 @@ p {
   color: aliceblue;
 }
 .feed {
+  transition: all 0.3s;
   .wrapper_titlePage {
     span {
       font-size: 40px;

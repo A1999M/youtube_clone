@@ -1,15 +1,17 @@
 .wrapper_sidebar {
+  transition: all 0.5s;
   position: fixed;
   left: 0;
   top: 4rem;
   overflow-y: auto;
   height: 100vh;
-  z-index: 3;
+  z-index: 1000;
   width: 14vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  background-color: #000;
   &::-webkit-scrollbar {
     width: 0px;
   }
