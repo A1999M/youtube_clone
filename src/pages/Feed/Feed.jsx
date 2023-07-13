@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext, useLayoutEffect } from "react";
 import categoryContext from "../../context/categoryContext";
 import { SideBar, Videos } from "../../components";
 import LocomotiveScroll from "locomotive-scroll";
