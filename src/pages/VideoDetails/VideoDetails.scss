@@ -1,3 +1,6 @@
+.videoDetails {
+  padding: 0 3rem;
+}
 .generalWrapper {
   position: sticky;
   top: 3rem;
@@ -14,6 +17,7 @@
   .wrapper_descriptions {
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
     .wrapper_channelDetails {
       display: flex;

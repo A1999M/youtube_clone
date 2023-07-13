@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import VideoItem from "./VideoItem";
-import "./VideoDetails.scss";
 import { Related } from "../../pages/VideoDetails";
+import "./VideoDetails.scss";
+import "./responsVideoDetails.scss";
 
 export default function VideoDetails() {
   const [relatedVideo, setRelatedVideo] = useState(null);
@@ -46,7 +47,7 @@ export default function VideoDetails() {
 
   return (
     <>
-      <div className="container-fluid px-5">
+      <div className="container-fluid videoDetails">
         <div className="row justify-content-end">
           <div className="col-12 col-lg-8">
             <VideoItem video={fetchedVideo} id={videoID} />

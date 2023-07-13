@@ -6,6 +6,7 @@ import Dislike from "../../icons/Dislike";
 import Subscribed from "../../icons/Subscribed";
 import MyLoader from "../../components/MyLoader";
 import "./VideoDetails.scss";
+import "./responsVideoDetails.scss";
 
 export default function VideoItem({ video, id }) {
   const [isSubscribe, setIsSubscribe] = useState(false);
@@ -58,6 +59,7 @@ export default function VideoItem({ video, id }) {
           <p className="titleVideoDetails">
             {video && video.items[0].snippet.title}
           </p>
+          {/*  */}
           <div className="wrapper_descriptions">
             <div className="wrapper_channelDetails">
               <img
@@ -102,6 +104,7 @@ export default function VideoItem({ video, id }) {
               </span>
             </div>
           </div>
+          {/*  */}
           <div className="wrapperView_desc">
             <span>
               {Math.round(video.items[0].statistics.viewCount / 1000)}K Views
