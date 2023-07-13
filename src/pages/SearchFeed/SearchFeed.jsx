@@ -1,8 +1,7 @@
-import { useEffect, useState, useContext, useLayoutEffect } from "react";
+import { useEffect, useState, useContext } from "react";
 import categoryContext from "../../context/categoryContext";
 import { useParams } from "react-router-dom";
 import { Videos } from "../../components";
-import LocomotiveScroll from "locomotive-scroll";
 import { motion } from "framer-motion";
 import "./SearchFeed.scss";
 
@@ -15,19 +14,6 @@ export default function SearchFeed() {
     showSidebar && sizeW < 1200
       ? { filter: "brightness(0.5)" }
       : { filter: "brightness(1)" };
-
-  useLayoutEffect(() => {
-    let locoScroll = new LocomotiveScroll({
-      el: document.querySelector(".searchFeed"),
-      smooth: true,
-      multiplier: 0.7,
-    });
-    locoScroll.start();
-
-    return () => {
-      locoScroll.destroy();
-    };
-  });
 
   useEffect(() => {
     const url = `https://youtube-v31.p.rapidapi.com/search?part=snippet&q=${searchTerm}&maxResults=50`;
@@ -56,10 +42,9 @@ export default function SearchFeed() {
         exit={{ opacity: 0 }}
         transition={{ type: "tween", duration: 0.5 }}
         style={styleFeed}
-        data-scroll-container
         className="container-fluid searchFeed"
       >
-        <div data-scroll-section className="row justify-content-end">
+        <div className="row justify-content-end">
           <div className="col-12">
             <div className="row">
               {/* title page */}

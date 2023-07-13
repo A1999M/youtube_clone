@@ -1,10 +1,10 @@
-import { useEffect, useState, useContext, useLayoutEffect } from "react";
+import { useEffect, useState, useContext } from "react";
 import categoryContext from "../../context/categoryContext";
 import { SideBar, Videos } from "../../components";
-import LocomotiveScroll from "locomotive-scroll";
 import { motion } from "framer-motion";
 import "./Feed.scss";
 import "./responsFeed.scss";
+import "../../locomotive-scroll.css";
 
 export default function Feed() {
   const [selectedCategury, , sizeW, , showSidebar] =
@@ -15,19 +15,6 @@ export default function Feed() {
     showSidebar && sizeW < 1200
       ? { filter: "brightness(0.5)" }
       : { filter: "brightness(1)" };
-
-  useLayoutEffect(() => {
-    let locoScroll = new LocomotiveScroll({
-      el: document.querySelector(".feed"),
-      smooth: true,
-      multiplier: 0.7,
-    });
-    locoScroll.start();
-
-    return () => {
-      locoScroll.destroy();
-    };
-  });
 
   useEffect(() => {
     const url = `https://youtube-v31.p.rapidapi.com/search?part=snippet&q=${selectedCategury}&maxResults=50`;
@@ -57,10 +44,9 @@ export default function Feed() {
         exit={{ opacity: 0 }}
         transition={{ type: "tween", duration: 0.5 }}
         style={styleFeed}
-        data-scroll-container
         className="container-fluid feed"
       >
-        <div data-scroll-section className="row justify-content-end">
+        <div className="row justify-content-end">
           <div
             className={
               showSidebar

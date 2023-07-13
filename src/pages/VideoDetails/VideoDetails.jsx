@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import VideoItem from "./VideoItem";
 import { Related } from "../../pages/VideoDetails";
@@ -11,6 +11,14 @@ export default function VideoDetails() {
   let location = useLocation();
 
   let videoID = location.search.slice(4);
+
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  });
 
   useEffect(() => {
     const url = `https://youtube-v31.p.rapidapi.com/videos?part=snippet,statistics&id=${videoID}`;
