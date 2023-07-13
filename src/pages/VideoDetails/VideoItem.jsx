@@ -1,17 +1,23 @@
 import ReactPlayer from "react-player";
+import { useState } from "react";
 import Share from "../../icons/Share";
 import Like from "../../icons/Like";
 import Dislike from "../../icons/Dislike";
+import Subscribed from "../../icons/Subscribed";
 import MyLoader from "../../components/MyLoader";
 import "./VideoDetails.scss";
 
 export default function VideoItem({ video, id }) {
+  const [isSubscribe, setIsSubscribe] = useState(false);
+
   let handlerLike = () => {
     if (
       document.querySelector(".path1Like").getAttribute("fill") == "#dbdbdb00"
     ) {
       document.querySelector(".path1Like").setAttribute("fill", "#dbdbdb");
       document.querySelector(".path2Like").setAttribute("fill", "#dbdbdb");
+      document.querySelector(".path1DLike").setAttribute("fill", "#dbdbdb00");
+      document.querySelector(".path2DLike").setAttribute("fill", "#dbdbdb00");
     } else {
       document.querySelector(".path1Like").setAttribute("fill", "#dbdbdb00");
       document.querySelector(".path2Like").setAttribute("fill", "#dbdbdb00");
@@ -23,10 +29,16 @@ export default function VideoItem({ video, id }) {
     ) {
       document.querySelector(".path1DLike").setAttribute("fill", "#dbdbdb");
       document.querySelector(".path2DLike").setAttribute("fill", "#dbdbdb");
+      document.querySelector(".path1Like").setAttribute("fill", "#dbdbdb00");
+      document.querySelector(".path2Like").setAttribute("fill", "#dbdbdb00");
     } else {
       document.querySelector(".path1DLike").setAttribute("fill", "#dbdbdb00");
       document.querySelector(".path2DLike").setAttribute("fill", "#dbdbdb00");
     }
+  };
+
+  let handlerSubscribe = () => {
+    setIsSubscribe(!isSubscribe);
   };
 
   return (
@@ -59,18 +71,30 @@ export default function VideoItem({ video, id }) {
                 </span>
                 <span className="channelSubs">1.3M Subscribe</span>
               </div>
-              <span className="subBtn">subscribe</span>
+              {/* // //// */}
+              {isSubscribe ? (
+                <span onClick={handlerSubscribe} className="subscribedBtn">
+                  <Subscribed /> subscribed
+                </span>
+              ) : (
+                <span onClick={handlerSubscribe} className="subBtn">
+                  subscribe
+                </span>
+              )}
             </div>
             <div className="wrapper_videoRates">
               <span onClick={handlerLike} className="likeIcon">
                 <Like />
-                {Math.round(Math.random() * 100)}K
+                {Math.round(video.items[0].statistics.likeCount) > 1000
+                  ? Math.round(video.items[0].statistics.likeCount / 1000) + "K"
+                  : Math.round(video.items[0].statistics.likeCount)}
               </span>
               <span onClick={handlerDisLike} className="disLikeIcon">
                 <Dislike />
-                {Math.round(Math.random() * 10) > 0
-                  ? Math.round(Math.random() * 10) + "K"
-                  : Math.round(Math.random() * 10)}
+                {Math.round(video.items[0].statistics.commentCount) > 1000
+                  ? Math.round(video.items[0].statistics.commentCount / 1000) +
+                    "K"
+                  : Math.round(video.items[0].statistics.commentCount)}
               </span>
               <span className="shareIcon">
                 {" "}
@@ -80,9 +104,11 @@ export default function VideoItem({ video, id }) {
           </div>
           <div className="wrapperView_desc">
             <span>
-              {Math.round(video.items[0].statistics.viewCount / 1000)} Views
+              {Math.round(video.items[0].statistics.viewCount / 1000)}K Views
             </span>
-            <span>{Math.round(Math.random() * 10)} mounths ago</span>
+            <span>
+              {video.items[0].statistics.viewCount.slice(0, 1) * 2} mounths ago
+            </span>
             <p className="detailDesc">
               {video.items[0].snippet.description.slice(0, 300)}
             </p>
