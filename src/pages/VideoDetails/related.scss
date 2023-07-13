@@ -1,0 +1,47 @@
+.relatedVideos {
+  margin-top: 0px;
+  a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-decoration: none;
+    .relatedVideoImage {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    .relatedDetails {
+      margin-left: 15px;
+      margin-top: 20px;
+      .titleVideo {
+        color: #ffffff;
+        font-size: 14px;
+        margin-top: 5px;
+        line-height: 17px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+      }
+      .channelName {
+        color: #cccccc;
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 3px;
+        text-transform: capitalize;
+      }
+      .relatedView {
+        color: #cccccc;
+        font-size: 13px;
+        text-transform: capitalize;
+        margin-right: 5px;
+        display: inline-block;
+        margin-top: 5px;
+      }
+      .postDate {
+        color: #cccccc;
+        font-size: 12px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

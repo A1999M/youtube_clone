@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import categoryContext from "../../context/categoryContext";
-import { Videos } from "../../components";
+import { SideBar, Videos } from "../../components";
 import { motion } from "framer-motion";
 import "./Feed.scss";
 import "./responsFeed.scss";
@@ -36,6 +36,7 @@ export default function Feed() {
 
   return (
     <>
+      <SideBar />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -45,7 +46,13 @@ export default function Feed() {
         className="container-fluid feed"
       >
         <div className="row justify-content-end">
-          <div className="col-12 col-md-11 col-lg-10 col-xxl-10">
+          <div
+            className={
+              showSidebar
+                ? "col-12 col-md-11 col-lg-10 col-xxl-10"
+                : "col-12 col-md-11 col-lg-12 col-xxl-12"
+            }
+          >
             <div className="row">
               {/* title page */}
               <div className="col-12">

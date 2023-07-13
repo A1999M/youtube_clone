@@ -1,11 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Feed from "./pages/Feed";
 import SearchFeed from "./pages/SearchFeed";
 import VideoDetails from "./pages/VideoDetails";
 import ChannelDetail from "./pages/ChannelDetail";
 import { Route, Routes } from "react-router-dom";
 import categoryContext from "./context/categoryContext";
-import { SideBar } from "./components";
 import Navbar from "./components/Navbar";
 import { AnimatePresence } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,8 +16,6 @@ export default function App() {
   const [showSidebar, setShowSidebar] = useState(
     window.innerWidth >= 1400 ? true : false
   );
-
-  console.log(showSidebar);
 
   return (
     <>
@@ -34,10 +31,6 @@ export default function App() {
           ]}
         >
           <Navbar />
-          <SideBar
-            selectedCategury={selectedCategury}
-            setselectedCategury={setselectedCategury}
-          />
           <Routes>
             <Route path="/" element={<Feed />} />
             <Route path="/search/:searchTerm" element={<SearchFeed />} />

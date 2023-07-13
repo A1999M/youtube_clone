@@ -32,18 +32,36 @@ export default function SideBar() {
 
   return (
     <>
-      {!showSidebar && sizeW > 768 && (
+      {/* {!showSidebar && sizeW > 768 && (
         <div className="wrapper_slider2">
-          <img className="homeIcon2" src={homeIcon} alt="" />
-          <p className="hometitleIcon">Home</p>
-          <img className="shortIcon2" src={shortIcon} alt="" />
-          <p className="shortsTitleIcon">Shorts</p>
+          <img
+            setShowSidebar="home"
+            className="homeIcon2"
+            src={homeIcon}
+            alt=""
+          />
+          <p setShowSidebar="home" className="hometitleIcon">
+            Home
+          </p>
+          <img
+            setselectedCategury="shorts"
+            className="shortIcon2"
+            src={shortIcon}
+            alt=""
+          />
+          <p setselectedCategury="shorts" className="shortsTitleIcon">
+            Shorts
+          </p>
           <SubIcon />
-          <p className="subsTitleIcon">Subscrptions</p>
+          <p setselectedCategury="Subscrptions" className="subsTitleIcon">
+            Subscrptions
+          </p>
           <LibraryIcon />
-          <p className="libraryTitleIcon">Library</p>
+          <p setselectedCategury="Library" className="libraryTitleIcon">
+            Library
+          </p>
         </div>
-      )}
+      )} */}
       {showSidebar && (
         <div style={styleSidebar} className="wrapper_sidebar">
           {categories.map((category) => {
