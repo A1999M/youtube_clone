@@ -11,6 +11,9 @@ export default function VideoDetails() {
   let location = useLocation();
 
   let videoID = location.search.slice(4);
+
+  console.log(videoID);
+
   useEffect(() => {
     const url = `https://youtube-v31.p.rapidapi.com/videos?part=snippet,statistics&id=${videoID}`;
     const options = {

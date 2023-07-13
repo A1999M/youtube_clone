@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Feed from "./pages/Feed";
 import SearchFeed from "./pages/SearchFeed";
 import VideoDetails from "./pages/VideoDetails";
-import ChannelDetail from "./pages/ChannelDetail";
 import { Route, Routes } from "react-router-dom";
 import categoryContext from "./context/categoryContext";
 import Navbar from "./components/Navbar";
@@ -35,7 +34,6 @@ export default function App() {
             <Route path="/" element={<Feed />} />
             <Route path="/search/:searchTerm" element={<SearchFeed />} />
             <Route path="/video/:id" element={<VideoDetails />} />
-            <Route path="/channel/:id" element={<ChannelDetail />} />
           </Routes>
         </categoryContext.Provider>
       </AnimatePresence>
