@@ -2,6 +2,7 @@
   background-color: #000;
   position: sticky;
   top: 0px;
+  z-index: 100000000;
   //   navbar left logo styles
   .wrapper_leftSection {
     display: flex;
@@ -46,6 +47,7 @@
       right: 7px;
       top: 8px;
       font-size: 25px;
+      cursor: pointer;
     }
     input#search {
       background-color: #fff;
