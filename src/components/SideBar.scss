@@ -1,0 +1,107 @@
+.wrapper_sidebar {
+  transition: all 0.5s;
+  position: fixed;
+  left: 0;
+  top: 4rem;
+  overflow-y: auto;
+  height: 100vh;
+  z-index: 1000;
+  width: 14vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #000;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffd900;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+  }
+  .sidebarBtn {
+    border: 0;
+    border-radius: 30px;
+    background-color: rgba(240, 248, 255, 0);
+    padding: 5px 15px;
+    margin: 10px 0;
+    margin-left: 10px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #c30909;
+      .iconSidebarBtn {
+        color: aliceblue;
+      }
+      .nameSidebarBtn {
+        color: #fff;
+      }
+    }
+    .iconSidebarBtn {
+      transition: all 0.3s;
+      display: inline-block;
+      color: #ededed;
+      margin-right: 20px;
+    }
+    .nameSidebarBtn {
+      transition: all 0.3s;
+      color: #ededed;
+      display: inline-block;
+    }
+  }
+}
+.wrapper_slider2 {
+  position: fixed;
+  width: 4vw;
+  left: 0;
+  top: 5rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5px;
+  z-index: 9999999999;
+  .slider2Icons {
+    color: #fff !important;
+    font-size: 20px !important;
+  }
+  .homeIcon2 {
+    width: 23px;
+    display: inline-block;
+  }
+  .shortIcon2 {
+    width: 23px;
+    display: inline-block;
+  }
+  .hometitleIcon {
+    font-size: 11px;
+    color: #e5dfdf;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 17px;
+  }
+  .shortsTitleIcon {
+    font-size: 11px;
+    color: #e5dfdf;
+    margin-bottom: 17px;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  .subsTitleIcon {
+    font-size: 11px;
+    margin-bottom: 17px;
+    color: #e5dfdf;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  .libraryTitleIcon {
+    margin-bottom: 17px;
+    font-size: 11px;
+    color: #e5dfdf;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+}
