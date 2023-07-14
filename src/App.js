@@ -5,7 +5,6 @@ import VideoDetails from "./pages/VideoDetails";
 import { Route, Routes } from "react-router-dom";
 import categoryContext from "./context/categoryContext";
 import Navbar from "./components/Navbar";
-import { AnimatePresence } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
 
@@ -18,25 +17,23 @@ export default function App() {
 
   return (
     <>
-      <AnimatePresence>
-        <categoryContext.Provider
-          value={[
-            selectedCategury,
-            setselectedCategury,
-            sizeW,
-            setSizeW,
-            showSidebar,
-            setShowSidebar,
-          ]}
-        >
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Feed />} />
-            <Route path="/search/:searchTerm" element={<SearchFeed />} />
-            <Route path="/video/:id" element={<VideoDetails />} />
-          </Routes>
-        </categoryContext.Provider>
-      </AnimatePresence>
+      <categoryContext.Provider
+        value={[
+          selectedCategury,
+          setselectedCategury,
+          sizeW,
+          setSizeW,
+          showSidebar,
+          setShowSidebar,
+        ]}
+      >
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Feed />} />
+          <Route path="/search/:searchTerm" element={<SearchFeed />} />
+          <Route path="/video/:id" element={<VideoDetails />} />
+        </Routes>
+      </categoryContext.Provider>
     </>
   );
 }

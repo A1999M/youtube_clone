@@ -1,5 +1,4 @@
 import MyLoader from "./MyLoader";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./Videos.scss";
@@ -10,7 +9,7 @@ export default function Videos({ videos }) {
       {videos ? (
         videos.items.map((video, index) => {
           return (
-            index != 0 && (
+            index !== 0 && (
               <div
                 key={index}
                 className="col-12 col-md-6 col-lg-4 col-xxl-3 mt-1"

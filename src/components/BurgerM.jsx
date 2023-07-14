@@ -2,14 +2,7 @@ import { useContext } from "react";
 import categoryContext from "../context/categoryContext";
 
 export default function BurgerM() {
-  let [
-    selectedCategury,
-    setselectedCategury,
-    sizeW,
-    setSizeW,
-    showSidebar,
-    setShowSidebar,
-  ] = useContext(categoryContext);
+  let [, , , , showSidebar, setShowSidebar] = useContext(categoryContext);
 
   let handlerClick = () => {
     setShowSidebar(!showSidebar);

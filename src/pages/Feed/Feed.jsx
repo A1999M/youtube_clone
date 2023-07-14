@@ -32,6 +32,9 @@ export default function Feed() {
       })
       .then((data) => {
         setVideos(data);
+      })
+      .catch((err) => {
+        console.warn(err);
       });
   }, [selectedCategury]);
 

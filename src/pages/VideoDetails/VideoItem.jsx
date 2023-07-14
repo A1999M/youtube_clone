@@ -13,7 +13,7 @@ export default function VideoItem({ video, id }) {
 
   let handlerLike = () => {
     if (
-      document.querySelector(".path1Like").getAttribute("fill") == "#dbdbdb00"
+      document.querySelector(".path1Like").getAttribute("fill") === "#dbdbdb00"
     ) {
       document.querySelector(".path1Like").setAttribute("fill", "#dbdbdb");
       document.querySelector(".path2Like").setAttribute("fill", "#dbdbdb");
@@ -26,7 +26,7 @@ export default function VideoItem({ video, id }) {
   };
   let handlerDisLike = () => {
     if (
-      document.querySelector(".path1DLike").getAttribute("fill") == "#dbdbdb00"
+      document.querySelector(".path1DLike").getAttribute("fill") === "#dbdbdb00"
     ) {
       document.querySelector(".path1DLike").setAttribute("fill", "#dbdbdb");
       document.querySelector(".path2DLike").setAttribute("fill", "#dbdbdb");
