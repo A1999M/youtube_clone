@@ -31,6 +31,9 @@ export default function SearchFeed() {
       })
       .then((data) => {
         setVideos(data);
+      })
+      .catch((err) => {
+        console.warn(err);
       });
   }, [searchTerm]);
 
@@ -47,7 +50,6 @@ export default function SearchFeed() {
         <div className="row justify-content-end">
           <div className="col-12">
             <div className="row">
-              {/* title page */}
               <div className="col-12 mb-2 mt-4">
                 <div className="wrapper_titlePage">
                   <span className="searchTitle">
@@ -56,7 +58,6 @@ export default function SearchFeed() {
                   </span>
                 </div>
               </div>
-              {/* posts page */}
               <Videos videos={videos} />
             </div>
           </div>
